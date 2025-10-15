@@ -496,6 +496,14 @@
             position: relative;
         }
 
+        .modal-content.small {
+            max-width: 480px;
+        }
+
+        .modal-content.medium {
+            max-width: 640px;
+        }
+
         @keyframes modalSlideIn {
             from { opacity: 0; transform: translateY(-50px) scale(0.95); }
             to { opacity: 1; transform: translateY(0) scale(1); }
@@ -514,6 +522,179 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--text);
+        }
+
+        .modal-title span.icon {
+            font-size: 1.75rem;
+            margin-right: 0.75rem;
+        }
+
+        .detail-body {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .detail-section {
+            background: var(--surface-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius);
+            padding: 1.25rem;
+            box-shadow: var(--shadow);
+        }
+
+        .detail-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .detail-section dl {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 0.5rem 1rem;
+        }
+
+        .detail-section dt {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .detail-section dd {
+            margin: 0;
+            color: var(--text);
+        }
+
+        .detail-list {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: var(--text);
+        }
+
+        .detail-empty {
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .confirm-message {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .confirm-message strong {
+            color: var(--text);
+        }
+
+        .master-data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .master-card {
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            background: var(--surface-elevated);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .master-card header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .master-card header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .master-input {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .master-input .form-input {
+            flex: 1;
+        }
+
+        .master-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .master-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .master-item span {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .master-item .actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .icon-button {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            background: var(--background);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .icon-button:hover {
+            background: var(--primary-solid);
+            color: white;
+        }
+
+        .icon-button.danger:hover {
+            background: var(--danger);
+        }
+
+        .icon-button.warning:hover {
+            background: var(--warning);
+            color: white;
+        }
+
+        .icon-button.success:hover {
+            background: var(--success);
+        }
+
+        .master-empty {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .chip.neutral::before {
+            background: var(--info);
         }
 
         .close-btn {
